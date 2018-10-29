@@ -23,7 +23,28 @@
     <link href="css/shop-homepage.css" rel="stylesheet">
 
   </head>
-
+<script>
+  function addToCart(price,name,id,brand,category,variant, quantity){// Measure adding a product to a shopping cart by using an 'add' actionFieldObject
+// and a list of productFieldObjects.
+dataLayer.push({
+  'event': 'addToCart',
+  'ecommerce': {
+    'currencyCode': 'PEN',
+    'add': {                                // 'add' actionFieldObject measures.
+      'products': [{                        //  adding a product to a shopping cart.
+        'name': name,
+        'id': id,
+        'price': price,
+        'brand': brand,
+        'category': category,
+        'variant': variant,
+        'quantity': quantity
+       }]
+    }
+  }
+});
+}
+</script>
   <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQBC5BC"
@@ -116,7 +137,7 @@
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
-                  <button type="button" class="btn btn-primary">Leer artículo</button>
+                  <button type="button" class="btn btn-primary" onclick="addToCart(24.99,"Item One",1,"Arrecife","Servicio","variant","Cinco")">Leer artículo</button>
                 </div>
               </div>
             </div>
