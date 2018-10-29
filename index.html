@@ -9,7 +9,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MQBC5BC');</script>
     <script>
-  function addToCart(price,name,id,brand,category,variant,quantity){// Measure adding a product to a shopping cart by using an 'add' actionFieldObject
+  function addToCart(name,id,price,brand,category,variant,quantity){// Measure adding a product to a shopping cart by using an 'add' actionFieldObject
 // and a list of productFieldObjects.
 dataLayer.push({
   'event': 'addToCart',
@@ -138,7 +138,7 @@ dataLayer.push({
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
-                  <button type="button" class="btn btn-primary" onclick="addToCart(24.99,"Item One",1,"Arrecife","Servicio","variant","Cinco")">Leer artículo</button>
+                  <button type="button" class="btn btn-primary" onclick="addToCart('item one','12345','15.25','Google','Apparel','Gray',1)">Leer artículo</button>
                 </div>
               </div>
             </div>
