@@ -8,32 +8,7 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MQBC5BC');</script>
-    <script>
-  function addToCart(name,id,price,brand,category,variant,quantity){// Measure adding a product to a shopping cart by using an 'add' actionFieldObject
-// and a list of productFieldObjects.
-dataLayer.push({
-  'event': 'addToCart',
-  'ecommerce': {
-    'currencyCode': 'PEN',
-    'add': {                                // 'add' actionFieldObject measures.
-      'products': [{                        //  adding a product to a shopping cart.
-        'name': name,
-        'id': id,
-        'price': price,
-        'brand': brand,
-        'category': category,
-        'variant': variant,
-        'quantity': quantity
-       }]
-    }
-  }
-});
-}
-$('#carouselExampleIndicators').on('slide.bs.carousel', function () {
-  console.log($(this));
-  //var sliderActive = 
-})
-</script>
+    
   <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -250,6 +225,35 @@ $('#carouselExampleIndicators').on('slide.bs.carousel', function () {
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $( document ).ready(function() {
+      function addToCart(name,id,price,brand,category,variant,quantity){// Measure adding a product to a shopping cart by using an 'add' actionFieldObject
+// and a list of productFieldObjects.
+dataLayer.push({
+  'event': 'addToCart',
+  'ecommerce': {
+    'currencyCode': 'PEN',
+    'add': {                                // 'add' actionFieldObject measures.
+      'products': [{                        //  adding a product to a shopping cart.
+        'name': name,
+        'id': id,
+        'price': price,
+        'brand': brand,
+        'category': category,
+        'variant': variant,
+        'quantity': quantity
+       }]
+    }
+  }
+});
+}
+$('#carouselExampleIndicators').on('slide.bs.carousel', function () {
+  console.log($(this));
+  //var sliderActive = 
+})
+});
+
+</script>
 
   </body>
 
