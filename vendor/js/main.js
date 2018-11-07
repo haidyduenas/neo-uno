@@ -29,11 +29,11 @@ function virtualEventCategoria(name){
         'label':name
     });
 }
-$('#carouselExampleIndicators').on('slide.bs.carousel', function intentalo(id,name,creative,position) {
+$('#carouselExampleIndicators').on('slide.bs.carousel', function(id,name,creative,position) {
   console.log($(this));
 
   dataLayer.push({
-  'event': 
+  'event': promotionsImpression,
   'ecommerce': {
     'promoView': {
       'promotions': [                     //Array of promoFieldObjects.
