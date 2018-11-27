@@ -98,19 +98,16 @@ var dataSlider = [
   { 
   id: "1",           
   name: "Slider1",
-  creative: "150.90",
   position: "1"
   },
   { 
     id: "2",          
     name: "Slider2",
-    price: "165.90",
     position: "2"
     },
   {  
     id: "3",          
     name: "Slider3",
-    price: "100.90",
     position: "3"
   }
 ];
@@ -124,8 +121,8 @@ function promocionImpression(datos){
        {
          'id':datos.id,            //ID or Name is required.
          'name': datos.name,
-         'creative': "datos.creative",
-         'position': "datos.position"
+         'creative': "creative",
+         'position': datos.position
        }]
     }
     }
