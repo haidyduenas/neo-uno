@@ -93,21 +93,45 @@ function virtualEventCategoria(name){
         'label':name
     });
 }
-// $('#carouselExampleIndicators').on('slide.bs.carousel', function(id,name,creative,position) {
-//   console.log($(this));
 
-//   dataLayer.push({
-//   'event': promotionsImpression,
-//   'ecommerce': {
-//     'promoView': {
-//       'promotions': [                     //Array of promoFieldObjects.
-//        {
-//          'id': id,            //ID or Name is required.
-//          'name': name,
-//          'creative': creative,
-//          'position': position
-//        }]
-//     }
-//     }
-//   })
-// })
+var dataSlider = [
+  {            
+  name: "Slider1",
+  id: "1",
+  creative: "150.90",
+  position: "1"
+  },
+  {            
+    name: "Slider2",
+    id: "2",
+    price: "165.90",
+    position: "2"
+    },
+  {            
+    name: "Slider3",
+    id: "3",
+    price: "100.90",
+    position: "3"
+  }
+]
+function promocionImpression(datos){
+  dataLayer.push({
+  'event': promotionsImpression,
+  'ecommerce': {
+    'promoView': {
+      'promotions': [                     //Array of promoFieldObjects.
+       {
+         'id':datos.id,            //ID or Name is required.
+         'name': datos.name,
+         'creative': datos.creative,
+         'position': datos.position
+       }]
+    }
+    }
+  })
+}
+$('#carouselExampleIndicators').on('slide.bs.carousel', function(datos) {
+  console.log("holi");
+  var indice= $(this).data("slide-to");
+  promocionImpression(dataSlider[indice]);
+})
