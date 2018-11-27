@@ -133,6 +133,7 @@ function promocionImpression(datos){
 }
 
 $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
-  // var position= $(".active").data("id");
-   promocionImpression(dataSlider[0]);
+  var position= $("div div.active").data("id");
+  console.log(position)
+   promocionImpression(dataSlider[position]);
 })
