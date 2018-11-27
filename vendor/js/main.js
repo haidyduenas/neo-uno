@@ -1,53 +1,59 @@
 var datosProductos = 
   [
-    {
-      name:"Producto1",
-      sku:1,
-      brand:"Sony",
-      category:"variant1",
-      quantity:"1"
-
+    {            
+    name: "Producto1",
+    id: "1",
+    price: "150.90",
+    brand: "Sony",
+    category: "Videojuegos",
+    variant: "variant1",
+    quantity: "quantity1"
     },
-    {
-      name:"Producto1",
-      sku:"2",
-      brand:"Sega",
-      category:"variant1",
-      quantity:"1"
-
-    },
-    {
-      name:"Producto1",
-      sku:"3",
-      brand:"Xbox",
-      category:"variant1",
-      quantity:"1"
-
-    },      
-    {
-      name:"Producto1",
-      sku:"4",
-      brand:"LG",
-      category:"variant1",
-      quantity:"1"
-
-    },
-    {
-      name:"Producto1",
-      sku:"5",
-      brand:"Playstation",
-      category:"variant1",
-      quantity:"1"
-
-    },
-    {
-      name:"Producto1",
-      sku:"6",
-      brand:"Nintendo",
-      category:"variant1",
-      quantity:"1"
-
-    }
+    {            
+      name: "Producto2",
+      id: "2",
+      price: "165.90",
+      brand: "Nintendo",
+      category: "Videojuegos",
+      variant: "variant2",
+      quantity: "quantity2"
+      },
+      {            
+        name: "Producto3",
+        id: "3",
+        price: "100.90",
+        brand: "xBox",
+        category: "Videojuegos",
+        variant: "variant3",
+        quantity: "quantity3"
+      },
+      {            
+        name: "Producto4",
+        id: "4",
+        price: "215.90",
+        brand: "Nintendo",
+        category: "Videojuegos",
+        variant: "variant4",
+        quantity: "quantity4"
+      },
+      {            
+        name: "Producto5",
+        id: "5",
+        price: "150.90",
+        brand: "Sony",
+        category: "Videojuegos",
+        variant: "variant5",
+        quantity: "quantity5"
+      },
+      {            
+        name: "Producto6",
+        id: "6",
+        price: "200",
+        brand: "xBox",
+        category: "Videojuegos",
+        variant: "variant6",
+        quantity: "quantity6"
+      }
   ]
 
 function addToCart(datos){
