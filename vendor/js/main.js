@@ -115,42 +115,43 @@ var dataSlider = [
   }
 ]
 
-// function promocionImpression(datos){
-//   dataLayer.push({
-//   'event': promotionView,
-//   'ecommerce': {
-//     'promoView': {
-//       'promotions': [                     //Array of promoFieldObjects.
-//        {
-//          'id':datos.id,            //ID or Name is required.
-//          'name': datos.name,
-//          'creative': datos.creative,
-//          'position': datos.position
-//        }]
-//     }
-//     }
-//   })
-// }
-
-// $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
-//   console.log("holi");
-//   var position= $(this).data("id");
-//    promocionImpression(dataSlider[position]);
-// })
-function sliderMove() {
-  console.log("holi");
+function promocionImpression(datos){
   dataLayer.push({
-    'event': 'promotionView',
-    'ecommerce': {
-      'promoView': {
-        'promotions': [          // Array of promoFieldObjects.
-          {
-            'id': "1",            // ID or Name is required.
-            'name': "lol",
-            'creative': "creative",
-            'position': "position"
-          }]
-      }
+  'event': promotionView,
+  'ecommerce': {
+    'promoView': {
+      'promotions': [                     //Array of promoFieldObjects.
+       {
+         'id':datos.id,            //ID or Name is required.
+         'name': datos.name,
+         'creative': datos.creative,
+         'position': datos.position
+       }]
     }
-  });
+    }
+  })
 }
+
+$('#carouselExampleIndicators').on('slide.bs.carousel', function() {
+  console.log("holi");
+  var position= $(this).data("id");
+   promocionImpression(dataSlider[position]);
+})
+
+// function sliderMove() {
+//   console.log("holi");
+//   dataLayer.push({
+//     'event': 'promotionView',
+//     'ecommerce': {
+//       'promoView': {
+//         'promotions': [          // Array of promoFieldObjects.
+//           {
+//             'id': "1",            // ID or Name is required.
+//             'name': "lol",
+//             'creative': "creative",
+//             'position': "position"
+//           }]
+//       }
+//     }
+//   });
+// }
