@@ -113,19 +113,19 @@ var dataSlider = [
     price: "100.90",
     position: "3"
   }
-]
+];
 
 function promocionImpression(datos){
   dataLayer.push({
-  'event': promotionView,
+  'event': "promotionView",
   'ecommerce': {
     'promoView': {
       'promotions': [                     //Array of promoFieldObjects.
        {
          'id':datos.id,            //ID or Name is required.
          'name': datos.name,
-         'creative': datos.creative,
-         'position': datos.position
+         'creative': "datos.creative",
+         'position': "datos.position"
        }]
     }
     }
@@ -133,27 +133,6 @@ function promocionImpression(datos){
 }
 
 $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
-  console.log("holi");
-console.log(this)
-  var position= $(".slider-position").data("id");
-  console.log(position)
-   promocionImpression(dataSlider[position]);
+  // var position= $(".active").data("id");
+   promocionImpression(dataSlider[0]);
 })
-
-// function sliderMove() {
-//   console.log("holi");
-//   dataLayer.push({
-//     'event': 'promotionView',
-//     'ecommerce': {
-//       'promoView': {
-//         'promotions': [          // Array of promoFieldObjects.
-//           {
-//             'id': "1",            // ID or Name is required.
-//             'name': "lol",
-//             'creative': "creative",
-//             'position': "position"
-//           }]
-//       }
-//     }
-//   });
-// }
