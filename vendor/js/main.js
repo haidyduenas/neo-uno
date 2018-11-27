@@ -95,43 +95,61 @@ function virtualEventCategoria(name){
 }
 
 var dataSlider = [
-  {            
+  { 
+  id: "1",           
   name: "Slider1",
-  id: "1",
   creative: "150.90",
   position: "1"
   },
-  {            
+  { 
+    id: "2",          
     name: "Slider2",
-    id: "2",
     price: "165.90",
     position: "2"
     },
-  {            
+  {  
+    id: "3",          
     name: "Slider3",
-    id: "3",
     price: "100.90",
     position: "3"
   }
 ]
-function promocionImpression(datos){
+
+// function promocionImpression(datos){
+//   dataLayer.push({
+//   'event': promotionView,
+//   'ecommerce': {
+//     'promoView': {
+//       'promotions': [                     //Array of promoFieldObjects.
+//        {
+//          'id':datos.id,            //ID or Name is required.
+//          'name': datos.name,
+//          'creative': datos.creative,
+//          'position': datos.position
+//        }]
+//     }
+//     }
+//   })
+// }
+
+// $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
+//   console.log("holi");
+//   var position= $(this).data("id");
+//    promocionImpression(dataSlider[position]);
+// })
+function sliderMove() {
   dataLayer.push({
-  'event': promotionsImpression,
-  'ecommerce': {
-    'promoView': {
-      'promotions': [                     //Array of promoFieldObjects.
-       {
-         'id':datos.id,            //ID or Name is required.
-         'name': datos.name,
-         'creative': datos.creative,
-         'position': datos.position
-       }]
+    'event': 'promotionView',
+    'ecommerce': {
+      'promoView': {
+        'promotions': [          // Array of promoFieldObjects.
+          {
+            'id': "1",            // ID or Name is required.
+            'name': "lol",
+            'creative': "creative",
+            'position': "position"
+          }]
+      }
     }
-    }
-  })
+  });
 }
-$('#carouselExampleIndicators').on('slide.bs.carousel', function(datos) {
-  console.log("holi");
-  var indice= $(this).data("slide-to");
-  promocionImpression(dataSlider[indice]);
-})
