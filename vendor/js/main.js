@@ -29,21 +29,21 @@ function virtualEventCategoria(name){
         'label':name
     });
 }
-$('#carouselExampleIndicators').on('slide.bs.carousel', function(id,name,creative,position) {
-  console.log($(this));
+// $('#carouselExampleIndicators').on('slide.bs.carousel', function(id,name,creative,position) {
+//   console.log($(this));
 
-  dataLayer.push({
-  'event': promotionsImpression,
-  'ecommerce': {
-    'promoView': {
-      'promotions': [                     //Array of promoFieldObjects.
-       {
-         'id': id,            //ID or Name is required.
-         'name': name,
-         'creative': creative,
-         'position': position
-       }]
-    }
-    }
-  })
-})
+//   dataLayer.push({
+//   'event': promotionsImpression,
+//   'ecommerce': {
+//     'promoView': {
+//       'promotions': [                     //Array of promoFieldObjects.
+//        {
+//          'id': id,            //ID or Name is required.
+//          'name': name,
+//          'creative': creative,
+//          'position': position
+//        }]
+//     }
+//     }
+//   })
+// })

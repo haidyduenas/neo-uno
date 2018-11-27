@@ -1,0 +1,54 @@
+
+{
+	"products": [
+      {
+        "name":"Producto1",
+        "sku":"1",
+        "brand":"Sony",
+        "category":"variant1",
+        "quantity":"1"
+
+      },
+      {
+        "name":"Producto1",
+        "sku":"2",
+        "brand":"Sega",
+        "category":"variant1",
+        "quantity":"1"
+
+      },
+      {
+        "name":"Producto1",
+        "sku":"3",
+        "brand":"Xbox",
+        "category":"variant1",
+        "quantity":"1"
+
+      },      
+      {
+        "name":"Producto1",
+        "sku":"4",
+        "brand":"LG",
+        "category":"variant1",
+        "quantity":"1"
+
+      },
+      {
+        "name":"Producto1",
+        "sku":"5",
+        "brand":"Playstation",
+        "category":"variant1",
+        "quantity":"1"
+
+      },
+      {
+        "name":"Producto1",
+        "sku":"6",
+        "brand":"Nintendo",
+        "category":"variant1",
+        "quantity":"1"
+
+      }
+      
+	]
+}
