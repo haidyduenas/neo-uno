@@ -138,6 +138,7 @@ var dataSlider = [
 //    promocionImpression(dataSlider[position]);
 // })
 function sliderMove() {
+  console.log("holi");
   dataLayer.push({
     'event': 'promotionView',
     'ecommerce': {
