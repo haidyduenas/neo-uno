@@ -137,7 +137,7 @@ $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
 console.log(this)
   var position= $(".slider-position").data("id");
   console.log(position)
-  //  promocionImpression(dataSlider[position]);
+   promocionImpression(dataSlider[position]);
 })
 
 // function sliderMove() {
