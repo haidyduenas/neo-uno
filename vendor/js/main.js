@@ -2,7 +2,7 @@ var datosProductos =
   [
     {
       name:"Producto1",
-      sku:"1",
+      sku:1,
       brand:"Sony",
       category:"variant1",
       quantity:"1"
