@@ -134,8 +134,10 @@ function promocionImpression(datos){
 
 $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
   console.log("holi");
-  var position= $(this).data("id");
-   promocionImpression(dataSlider[position]);
+console.log(this)
+  var position= $(".slider-position").data("id");
+  console.log(position)
+  //  promocionImpression(dataSlider[position]);
 })
 
 // function sliderMove() {
