@@ -72,7 +72,7 @@ function onPromoClick(element) {
       }
     },
     'eventCallback': function () {
-      document.location = 'http://store.masgamers.com/merchandising/plush/pack-peluche-pokemon.html';
+      document.location = '#';
     }
   });
 }

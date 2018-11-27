@@ -97,6 +97,8 @@ function addToCart(datos){
       }
     });
 };
+
+
 //PROMOTION CLICK
 function productClick(productObj) {
   dataLayer.push({
@@ -140,6 +142,27 @@ function virtualEventCategoria(name){
         'label':name
     });
 }
+function virtualEventMenu(name){
+  // var nameCategory = name.getAttribute('name');
+  dataLayer.push({
+      'event': 'virtualEvent',
+      'category':'home',
+      'action': 'Selecionar menú',
+      'label':name
+  });
+}
+//MOUSE OVER
+
+$(".nav-item").mouseover(function(){
+  var name = $("div ul li.active a").data("name");
+  console.log(name)
+  virtualEventMenu(name)
+});
+
+
+
+
+
 
 function promotionImpression(datos){
   dataLayer.push({
@@ -163,3 +186,5 @@ $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
   console.log(position)
    promotionImpression(dataSlider[position]);
 })
+
+
