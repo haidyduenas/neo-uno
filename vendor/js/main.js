@@ -1,3 +1,4 @@
+
 var datosProductos = 
   [
     {            
@@ -55,6 +56,25 @@ var datosProductos =
         quantity: "quantity6"
       }
   ]
+  
+  var dataSlider = [
+    { 
+    id: "1",           
+    name: "Slider1",
+    position: "1"
+    },
+    { 
+      id: "2",          
+      name: "Slider2",
+      position: "2"
+      },
+    {  
+      id: "3",          
+      name: "Slider3",
+      position: "3"
+    }
+  ];
+  
 
 function addToCart(datos){
     // Measure adding a product to a shopping cart by using an 'add' actionFieldObject
@@ -76,13 +96,40 @@ function addToCart(datos){
        }
       }
     });
-}
+};
+//PROMOTION CLICK
+function productClick(productObj) {
+  dataLayer.push({
+    'event': 'productClick',
+    'ecommerce': {
+      'click': {
+        'actionField': {'list': 'Search Results'},      // Optional list property.
+        'products': [{
+          'name': productObj.name,                      // Name or ID is required.
+          'id': productObj.id,
+          'price': productObj.price,
+          'brand': productObj.brand,
+          'category': productObj.cat,
+          'variant': productObj.variant,
+          'position': productObj.position
+         }]
+       }
+     },
+     'eventCallback': function() {
+       document.location ="#" //productObj.url
+     }
+  });}
+
 $(".add-to-cart").on("click",function(){
   var indice = $(this).data("id");
   console.log(indice);
   addToCart(datosProductos[indice])
 })
-
+$(".click-product").on("click",function(){
+  var indice = $(this).data("id");
+  console.log(indice);
+  productClick(datosProductos[indice])
+})
 //virtual event categoria
 function virtualEventCategoria(name){
     // var nameCategory = name.getAttribute('name');
@@ -94,25 +141,7 @@ function virtualEventCategoria(name){
     });
 }
 
-var dataSlider = [
-  { 
-  id: "1",           
-  name: "Slider1",
-  position: "1"
-  },
-  { 
-    id: "2",          
-    name: "Slider2",
-    position: "2"
-    },
-  {  
-    id: "3",          
-    name: "Slider3",
-    position: "3"
-  }
-];
-
-function promocionImpression(datos){
+function promotionImpression(datos){
   dataLayer.push({
   'event': "promotionView",
   'ecommerce': {
@@ -121,7 +150,7 @@ function promocionImpression(datos){
        {
          'id':datos.id,            //ID or Name is required.
          'name': datos.name,
-         'creative': "creative",
+         'creative': datos.creative,
          'position': datos.position
        }]
     }
@@ -132,5 +161,5 @@ function promocionImpression(datos){
 $('#carouselExampleIndicators').on('slide.bs.carousel', function() {
   var position= $("div div.active").data("id");
   console.log(position)
-   promocionImpression(dataSlider[position]);
+   promotionImpression(dataSlider[position]);
 })
